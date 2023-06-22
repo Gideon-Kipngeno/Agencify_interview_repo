@@ -48,14 +48,14 @@ public class LargestDiff {
         }
 
         int min = numbers.get(0);
-        int maxDiff = numbers.get(1) - min;
+        int maxDiffNum = numbers.get(1) - min;
 
         for (int i = 1; i < numbers.size(); i++) {
             int currentNum = numbers.get(i);
             int diff = currentNum - min;
 
-            if (diff > maxDiff) {
-                maxDiff = diff;
+            if (diff > maxDiffNum) {
+                maxDiffNum = diff;
             }
 
             if (currentNum < min) {
@@ -63,6 +63,6 @@ public class LargestDiff {
             }
         }
 
-        return maxDiff;
+        return maxDiffNum;
     }
 }
